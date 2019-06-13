@@ -1,23 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define TAM 2
-
-void main(void)
+int main()
 {
-	int determ;
-	int vlr_a;
-	int matriz[TAM][TAM];
+	/* matriz é um vetor com duas dimensões
+	onde se pode armazenar uma quantidade maior
+	de dados do mesmo tipo.
 
+	para acessar o valor de uma posição da matriz,
+	se utiliza dois índices: um para a linha
+	e outro para a coluna
 
-	for (int i = 0; i < TAM; ++i)
-		for (int j = 0; j < TAM; ++j)
+	int nome_do_array[num de linhas][num de colunas]
+	*/
+
+	int matriz[5][5]; // declaração da matriz
+
+	for (int linha = 0; linha < 10; ++linha)
+	{
+		for (int coluna = 0; coluna < 5; ++coluna)
 		{
-			printf("Entre item %d %d\n", i + 1, j + 1);
-			scanf("%d", &vlr_a);
-			matriz[i][j] = vlr_a;
+			if(linha == coluna)
+				printf("%d\n",matriz[linha][coluna]);
 		}
-
-
-	determ = matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0];
-	printf("Determinante: %d\n", determ);
+	}
+	return 0;
 }

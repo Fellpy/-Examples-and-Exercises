@@ -1,29 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Vetores
-
-#define TAMANHO 5
-
-void main(void)
+int main()
 {
+	/* vetor é uma estrutura capaz
+	de armazenar um conjunto de valores de mesmo tipo
+	com um único nome de referencia.
+	*/
 
-	int vlr_a;
-	int soma;
-	int vetor[TAMANHO];
-
-	// um vetor sempre começa na posição 0
-	for (int i = 0; i < TAMANHO; ++i)
-	{
-		printf("Entre com o valor %d: ", i + 1);
-		scanf("%d", &vlr_a);
-		vetor[i] = vlr_a;
+	// declarando um vetor
+	int notas[100];
+	int i, j;
+	// laço para preencher o vetor com as
+	// notas digitadas pelo usuário
+	for(i = 0, j = 0; i <= 100;i++, j++){
+		printf("Digite a nota do aluno %d\n",j);
+		scanf("%d",&notas[i]);
 	}
-
-	soma = 0;
-	for (int i = 0; i < TAMANHO; ++i)
-	{
-		soma += vetor[i];
-	}
-	printf("Media: %f\n", soma / (TAMANHO * 1.0));
+	return 0;
 }
